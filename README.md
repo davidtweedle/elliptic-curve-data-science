@@ -14,10 +14,9 @@ I wish to thank the organizers and speakers of the murmurations conference held 
 
 ### Installing
 --------------
-The data of the project is located at [Link to data hosted on cocalc](https://cocalc.com/share/public_paths/6ac9a1a360c3e3bc6fb8c073bb5f7c033aaf28dc).
-In order to host the data along with these Jupyter notebooks, I am using git lfs and [lfs-folderstore](https://github.com/sinbad/lfs-folderstore).
-So you must install git lfs (see [git lfs](https://github.com/git-lfs/git-lfs) and lfs-folderstore first.
-Then see [Cloning a repo](https://github.com/sinbad/lfs-folderstore#cloning-a-repo) for instructions on how to clone the repository.
+The data of the project is located at [google drive link to all-data.tar.gz](https://drive.google.com/file/d/1HV6sNle8l5t4diKn5p2mbR-xOTl-_p9l/view?usp=sharing).
+I am using google drive to host the data files for these notebooks.
+Please download the data file above (all-data.tar.gz) and extract into the data/ directory in the project.
 
 ### Jupyter notebooks
 ---------------------
