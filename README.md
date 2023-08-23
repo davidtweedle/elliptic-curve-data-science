@@ -1,4 +1,4 @@
-## Murmurations Replication
+## Murmurations study
 
 ---------------------------
 
