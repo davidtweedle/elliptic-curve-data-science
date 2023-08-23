@@ -1,0 +1,4 @@
+*.term
+*.ipynb_checkpoints
+*.sage-jupyter2
+**/__pycache__/

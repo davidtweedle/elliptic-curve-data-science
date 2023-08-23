@@ -1,0 +1,10 @@
+install("init_generate_data","v","init_generate_data","./generate-data.gp.so");
+install("write_aps","vGD0,G,D0,G,sp","write_aps","./generate-data.gp.so");
+install("construct_box_curves","vGGGsp","construct_box_curves","./generate-data.gp.so");
+install("construct_twists_sqrt_n3","vGGsp","construct_twists_sqrt_n3","./generate-data.gp.so");
+install("construct_twists_sqrt_n1","vD0,G,D0,G,D0,G,p","construct_twists_sqrt_n1","./generate-data.gp.so");
+install("rescale_aps_sqrt_n1_step","vD0,G,D0,G,D0,G,D0,G,D0,G,D0,G,D0,G,p","rescale_aps_sqrt_n1_step","./generate-data.gp.so");
+install("rescale_aps_sqrt_n1","vD0,G,D0,G,D0,G,D0,G,D0,G,D0,G,p","rescale_aps_sqrt_n1","./generate-data.gp.so");
+install("construct_twists_sqrt_N","vGGGsp","construct_twists_sqrt_N","./generate-data.gp.so");
+install("construct_all_twists","vD0,G,GGGsp","construct_all_twists","./generate-data.gp.so");
+install("nth_power_free","GG","nth_power_free","./generate-data.gp.so");
