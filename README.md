@@ -51,7 +51,7 @@ Three simple scripts to assist in displaying murmurations.
 The following are contained in the murmur_from_dataframe.py in the directory pyscript.
 
 1. bin_murmuration - for each $E,p$ in the dataset, bin $a_p(E)$ according to the value of $p/N(E)$ where $N$ is the conductor. This assumes that the data has already been split according to the parity of the rank of each elliptic curve.
-2. display_murmuration - given a pandas dataframe containing $a_p(E)$ for each $E$, $p$ in our dataset, compute the mean of $\{a_p(E) \ |\ \operatorname{rank}(E)\equiv 0\bmod{2}\}$ and display a plot of the results as $y$ vs $x$-coordinate $p$. Then do the same for $\operatorname{rank}(E)\equiv1\bmod{2}$ and then $w(E)\cdot a_p(E)$ where $w(E)$ is $1$ if the rank of $E$ is even and $-1$ if the rank of $E$ is odd.
+2. display_murmuration - given a pandas dataframe containing $a_p(E)$ for each $E$, $p$ in our dataset, compute the mean of $\{a_p(E) \ |\ \mathrm{rank}(E)\equiv 0\bmod{2}\}$ and display a plot of the results as $y$ vs $x$-coordinate $p$. Then do the same for $\mathrm{rank}(E)\equiv1\bmod{2}$ and then $w(E)\cdot a_p(E)$ where $w(E)$ is $1$ if the rank of $E$ is even and $-1$ if the rank of $E$ is odd.
 3. display_rescaled_murmuration - given the results of bin_murmuration, display the results in a similar way as display_murmuration.
 
 ### GP scripts
