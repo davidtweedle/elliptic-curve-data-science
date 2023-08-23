@@ -56,12 +56,12 @@ Later on, we bin the $a_p(E)$ according to $p/N(E)$ (taking advantage of the sca
 The result is the following two animations.
 The first is the analogue to our first animation above.
 
-https://github.com/davidtweedle/elliptic-curve-data-science/assets/10039567/a0fa5802-9f1c-4fb0-9850-acdecf84b387
+
+https://github.com/davidtweedle/elliptic-curve-data-science/assets/10039567/ba963723-691d-4805-9756-f440cac27ba6
 
 The second animation is a running average of each plot above. The plot converges very nicely and we can see that in the murmuration function is not smooth, and has a periodic flavour (but it is not periodic).
 
-https://github.com/davidtweedle/elliptic-curve-data-science/assets/10039567/9c550531-51be-44f2-9f7d-1b7b830ef82d
-
+https://github.com/davidtweedle/elliptic-curve-data-science/assets/10039567/5e01e3db-fdbf-49bc-8f97-71e0941dc18c
 
 ![Scaled conductor 50000](media/scaled_cond_50k.png)
 
