@@ -10,8 +10,17 @@ A collection of python notebooks investigating the murmuration phenomenon in ell
 
 The aim of this project is to help describe the recent phenomenon of murmurations in elliptic curves.
 This project consists of simple Jupyter notebooks which will demonstrate the murmuration phenomenon in an easily reproducible manner.
-I wish to acknowledge the organizers of the murmurations conference held at ICERM [Murmurations Conference](https://icerm.brown.edu/events/htw-23-ma/).
+I wish to thank the organizers and speakers of the murmurations conference held at ICERM [Murmurations Conference](https://icerm.brown.edu/events/htw-23-ma/).
 
+### Installing
+--------------
+The data of the project is located at [Link to data hosted on cocalc](https://cocalc.com/share/public_paths/6ac9a1a360c3e3bc6fb8c073bb5f7c033aaf28dc).
+In order to host the data along with these Jupyter notebooks, I am using git lfs and [lfs-folderstore](https://github.com/sinbad/lfs-folderstore).
+So you must install git lfs (see [git lfs](https://github.com/git-lfs/git-lfs) and lfs-folderstore first.
+Then see [Cloning a repo](https://github.com/sinbad/lfs-folderstore#cloning-a-repo) for instructions on how to clone the repository.
+
+### Jupyter notebooks
+---------------------
 I provide several Jupyter notebooks which can be used to reproduce the phenomenon.
 
 1. [Introduction](intro_murmurations.ipynb)
@@ -22,6 +31,7 @@ I provide several Jupyter notebooks which can be used to reproduce the phenomeno
 
 Also included are two sets of scripts, and some sample datasets.
 Let's now see some of the plots.
+
 ### Plots for $7500\leq N(E)\leq 10000$
 ---------------------------------------
 <img src="media/plot_cond_7500_10000.png"  alt="Murmuration plot N(E) in 7500...10000"  width="521.205px"  height="156.352px"  title="Mean value of aps vs p, N(E) in [7500,10000]" style="object-fit:cover"/>
@@ -30,16 +40,28 @@ Let's now see some of the plots.
 
 ### Plot for $N(E) \sim 100000$
 -------------------------------
+In this plot, we see that although the rescaling of the $x$-coordinates does not change the plot too much, the binning into intervals does smooth out the plot quite a bit (as you would expect). The plot below is of the mean of $a_p(E)$ where $N(E)\sim 100000$ and $p\leq 200000$, split according to the parity of the rank of $E$. To obtain the second row of plots, instead of plotting the mean of $a_p(E)$ over all $E$ with $N(E)\sim 100000$, we bin the $a_p(E)$ according to $p/N(E)$, take the averages of the bins and then plot the averages.
+
 ![second picture](media/scaling_vs_no_cond_100k.png "Comparing scaling vs no rescaling over a short interval of conductors")
 
 ### Plots and videos for $N(E)\leq 50000$
 ------------------------------
+We computed $a_p(E)$ for all $p\leq 50000$ and all elliptic curves with conductor $N(E)\leq 50000$ (obtained from the LMFDB).
+At first, I split the curves into 14 distinct blocks of contiguous conductors and plot the mean of $a_p(E)$ vs $p$.
+In the below animation, you can clearly see the scale invariance (in the $x$-coordinate) of the plots.
 
-[Murmuration animation](media/murmuration_animation.mp4)
+https://github.com/davidtweedle/elliptic-curve-data-science/assets/10039567/d36e2378-285c-4968-baa2-c9878c36853f
 
-[Rescaled conductor](media/rescaled_cond_50000.mp4)
+Later on, we bin the $a_p(E)$ according to $p/N(E)$ (taking advantage of the scale invariance) and then compute the means.
+The result is the following two animations.
+The first is the analogue to our first animation above.
 
-[Running averages conductor <= 50000](media/running_averages_cond_50000.mp4)
+https://github.com/davidtweedle/elliptic-curve-data-science/assets/10039567/a0fa5802-9f1c-4fb0-9850-acdecf84b387
+
+The second animation is a running average of each plot above. The plot converges very nicely and we can see that in the murmuration function is not smooth, and has a periodic flavour (but it is not periodic).
+
+https://github.com/davidtweedle/elliptic-curve-data-science/assets/10039567/9c550531-51be-44f2-9f7d-1b7b830ef82d
+
 
 ![Scaled conductor 50000](media/scaled_cond_50k.png)
 
