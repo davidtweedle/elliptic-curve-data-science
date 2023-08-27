@@ -2,14 +2,13 @@ import pandas as pd
 import numpy as np
 import math
 
-def bin_murmuration(ec:pd.DataFrame, primes:pd.Index, N:int, n:int):
+def bin_murmuration(ec:pd.DataFrame, primes:pd.Index, x):
   ''' ec is a pandas DataFrame 
       primes is a subset of the columns of ec
       corresponding to the prime columns of ec
       N is the bound on p/c where p is prime, c is hte conductor on E
       n is the number of bins
   '''
-  x = np.linspace(1.0/n,N,n);
   idx = np.digitize(np.outer(np.reciprocal(1.0*ec['conductor']),primes.astype(float)),x);
   counts = np.zeros(shape=x.shape);
   sum_aps = np.zeros(shape=x.shape);
@@ -17,7 +16,7 @@ def bin_murmuration(ec:pd.DataFrame, primes:pd.Index, N:int, n:int):
     where = np.equal(idx,i);
     counts[i] = where.sum();
     sum_aps[i] = ec[primes].to_numpy()[where].sum();
-  return x,sum_aps,counts;
+  return sum_aps,counts;
 
 def display_murmuration(ec,scale,primes,title,ax,xlim=None,ylim=None):
   ''' ec is a dataframe representing a list of elliptic curves
