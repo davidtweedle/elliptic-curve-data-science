@@ -19,7 +19,7 @@ def bin_murmuration(ec:pd.DataFrame, primes:pd.Index, N:int, n:int):
     sum_aps[i] = ec[primes].to_numpy()[where].sum();
   return x,sum_aps,counts;
 
-def display_murmuration(ec,scale,primes,title,ax):
+def display_murmuration(ec,scale,primes,title,ax,xlim=None,ylim=None):
   ''' ec is a dataframe representing a list of elliptic curves
       rank has been normalized so that ec['rank'] in {-1,1}
       and -1 corresponds to odd rank, 1 to even rank
@@ -27,6 +27,12 @@ def display_murmuration(ec,scale,primes,title,ax):
       title is the title to be displayed
       ax is an array of 3 axes
   '''
+  for axis in ax:
+    axis.clear();
+    if xlim:
+      axis.set_xlim(xlim)
+    if ylim:
+      axis.set_ylim(ylim)
   t = primes.astype(int)*scale;
   ax[0].plot(t,ec.loc[ec['rank']==1,primes].mean(),'b.');
   ax[1].plot(t,ec.loc[ec['rank']==-1,primes].mean(),'r.');
@@ -35,7 +41,7 @@ def display_murmuration(ec,scale,primes,title,ax):
   ax[1].set_title(title+", odd rank");
   ax[2].set_title(title+", combined ranks");
 
-def display_rescaled_murmuration(x,sum_aps_even,counts_even,sum_aps_odd,counts_odd,title,ax):
+def display_rescaled_murmuration(x,sum_aps_even,counts_even,sum_aps_odd,counts_odd,title,ax,xlim=None,ylim=None):
   ''' x is an array of x coordinates
       sum_aps_even is the sum_aps as binned by compute_murmur for the curves with even rank
       count_even is the binned counts of the aps as computed by compute_murmur
@@ -44,6 +50,12 @@ def display_rescaled_murmuration(x,sum_aps_even,counts_even,sum_aps_odd,counts_o
       title is a string which will be the title of each plot
       ax is 3 Axes objects
   '''
+    for axis in ax:
+    axis.clear();
+    if xlim:
+      axis.set_xlim(*xlim)
+    if ylim:
+      axis.set_ylim(*ylim)
   ax[0].plot(x,sum_aps_even/counts_even,'b.');
   ax[1].plot(x,sum_aps_odd/counts_odd,'r.');
   ax[2].plot(x,(sum_aps_even-sum_aps_odd)/(counts_even+counts_odd),'c.');

@@ -1,3 +1,4 @@
+*.swp
 *.term
 *.ipynb_checkpoints
 *.sage-jupyter2
