@@ -18,6 +18,9 @@ The data of the project is located at [google drive link to all-data.tar.gz](htt
 I am using google drive to host the data files for these notebooks.
 Please download the data file above (all-data.tar.gz) and extract into the data/ directory in the project.
 
+Alternatively, you can load each notebook in google colaboratory.
+If you do this, you can uncomment the relevant lines in order to run each notebook from google colab.
+
 ### Jupyter notebooks
 ---------------------
 I provide several Jupyter notebooks which can be used to reproduce the phenomenon.
