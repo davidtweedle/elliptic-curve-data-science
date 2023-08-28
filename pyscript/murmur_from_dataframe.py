@@ -9,6 +9,7 @@ def bin_murmuration(ec:pd.DataFrame, primes:pd.Index, x):
       N is the bound on p/c where p is prime, c is hte conductor on E
       n is the number of bins
   '''
+  n = len(x); 
   idx = np.digitize(np.outer(np.reciprocal(1.0*ec['conductor']),primes.astype(float)),x);
   counts = np.zeros(shape=x.shape);
   sum_aps = np.zeros(shape=x.shape);
@@ -29,9 +30,9 @@ def display_murmuration(ec,scale,primes,title,ax,xlim=None,ylim=None):
   for axis in ax:
     axis.clear();
     if xlim:
-      axis.set_xlim(xlim)
+      axis.set_xlim(*xlim)
     if ylim:
-      axis.set_ylim(ylim)
+      axis.set_ylim(*ylim)
   t = primes.astype(int)*scale;
   ax[0].plot(t,ec.loc[ec['rank']==1,primes].mean(),'b.');
   ax[1].plot(t,ec.loc[ec['rank']==-1,primes].mean(),'r.');
